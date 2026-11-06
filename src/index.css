@@ -1,0 +1,37 @@
+﻿@font-face {
+  font-family: Outfit;
+  src: url('./assets/fonts/Outfit-Variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  font-family: Outfit, 'Segoe UI', sans-serif;
+  color: #424242;
+  background: #77ade0 url('./assets/portfolio/background.png') center center / cover fixed no-repeat;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --ink: #424242;
+  --surface: #fff;
+  --accent: #5463a6;
+  --divider: #ccc;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+p { margin: 0; }
+img { max-width: 100%; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.window-titlebar a:focus-visible { outline-color: white; }
+#view-content:focus { outline: none; }
+.skip-link { position: fixed; z-index: 10; top: 12px; left: 12px; padding: 12px 20px; color: white; background: var(--ink); transform: translateY(-150%); }
+.skip-link:focus { transform: translateY(0); }
+::selection { color: white; background: var(--accent); }
+
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+

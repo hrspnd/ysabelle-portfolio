@@ -1,0 +1,40 @@
+﻿.hero-content {
+  min-height: clamp(580px, 39vw, 746px);
+  padding: 40px clamp(40px, 4.5vw, 86px);
+  display: grid;
+  grid-template-columns: minmax(180px, 358px) minmax(0, 1fr) minmax(128px, 195px);
+  align-items: center;
+  gap: clamp(28px, 2.6vw, 50px);
+}
+.portrait-window { width: 100%; max-width: 358px; background: var(--ink); border: 6px solid var(--ink); border-radius: 8px 8px 0 0; overflow: hidden; }
+.portrait-titlebar { height: clamp(18px, 1.46vw, 28px); background: var(--ink); margin: 0; }
+.portrait-crop { position: relative; width: 100%; margin: 0; aspect-ratio: 346 / 419; overflow: hidden; }
+.portrait-crop img { position: absolute; width: 117.63%; height: 129.41%; max-width: none; left: -9.25%; top: -29.37%; }
+.hero-greeting { font-size: clamp(28px, 2.5vw, 48px); margin-bottom: 12px; }
+.hero-introduction h1 { color: var(--accent); font-size: clamp(40px, 5.2vw, 100px); line-height: 1.2; font-weight: 700; letter-spacing: -0.035em; margin: 0 0 12px; }
+.hero-introduction h1 span { display: block; }
+.hero-description { font-size: clamp(19px, 1.67vw, 32px); line-height: 1.4; }
+.hero-shortcuts { display: flex; flex-direction: column; gap: 12px; }
+@media (min-width: 1450px) { .hero-introduction h1 { white-space: nowrap; } }
+@media (max-width: 1100px) {
+  .hero-content { grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr); padding: 48px 36px; gap: 32px; }
+  .hero-introduction h1 { font-size: clamp(38px, 5.3vw, 58px); }
+  .hero-shortcuts { grid-column: 1 / -1; flex-direction: row; justify-content: center; gap: 24px; }
+  .hero-shortcuts > * { max-width: 160px; }
+}
+@media (max-width: 600px) {
+  .hero-content { grid-template-columns: minmax(0, 1fr); padding: 32px 20px; gap: 28px; min-height: auto; }
+  .portrait-window { max-width: 210px; margin-inline: auto; }
+  .hero-introduction { text-align: center; }
+  .hero-greeting { font-size: 26px; margin-bottom: 8px; }
+  .hero-introduction h1 { font-size: clamp(32px, 8vw, 46px); letter-spacing: -0.025em; }
+  .hero-description { font-size: 18px; }
+  .hero-line-break { display: none; }
+  .hero-shortcuts { gap: 4px; }
+  .hero-shortcuts .desktop-shortcut { font-size: 14px; }
+  .hero-shortcuts .desktop-shortcut img { width: 64px; height: 64px; }
+
+}
+
+
+

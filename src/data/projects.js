@@ -1,0 +1,48 @@
+﻿export const projects = [
+  {
+    id: 'capsicam',
+    name: 'CapsiCAM',
+    image: 'project-capsicam',
+    role: 'Group Thesis Project | Full Stack Developer',
+    description: 'CapsiCAM is a mobile application developed as our undergraduate thesis project to identify common chili pepper leaf diseases using machine learning. The application allows users to capture or upload leaf images and classify them as healthy, bacterial leaf spot, or Cercospora leaf spot. It also provides confidence scores, visual heatmaps highlighting areas that influenced the prediction, and a scan history feature for reviewing previous results. CapsiCAM aims to make chili pepper leaf disease identification more accessible and convenient through a user-friendly mobile interface.',
+    technologies: ['Flutter', 'Python', 'TensorFlow Lite', 'Supabase'],
+    github: 'https://github.com/hrspnd/CapsiCAM',
+  },
+  {
+    id: 'stardewfest',
+    name: 'StardewFest Website',
+    image: 'project-stardewfest',
+    pixelArt: true,
+    description: 'StardewFest is a fan-made website dedicated to the seasonal festivals and events in Stardew Valley. It provides players with an easy way to explore festival information through a themed, responsive interface inspired by the game. The project focuses on frontend development, visual design, and creating an engaging browsing experience.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com/hrspnd/StardewFest',
+  },
+  {
+    id: 'haulam',
+    name: 'HAUlam',
+    image: 'project-haulam',
+    role: 'Group Project - Full-Stack Developer',
+    description: 'HAUlam is a mobile application designed to help Holy Angel University students discover food stalls and explore available food options on campus. Users can browse stalls, search for dishes by name or category, and bookmark their favorites. Built with Flutter and Supabase, the application includes user authentication and cloud-based data management for a convenient food discovery experience.',
+    technologies: ['Flutter', 'Dart', 'Supabase'],
+    github: 'https://github.com/hrspnd/HAUlam',
+  },
+  {
+    id: 'stardew-tracker',
+    name: 'Stardew Perfection Tracker',
+    image: 'project-tracker',
+    pixelArt: true,
+    description: 'Stardew Perfection Tracker is a web application designed to help Stardew Valley players track their progress toward achieving 100% perfection. It organizes objectives such as shipping items, catching fish, collecting Golden Walnuts, completing recipes, and building friendships into individual trackers. An interactive dashboard displays overall completion progress, while browser-based storage allows users to save and manage their progress without creating an account.',
+    technologies: ['React', 'JavaScript', 'Vite', 'CSS', 'LocalStorage'],
+    github: 'https://github.com/hrspnd/stardew-perfection-tracker',
+  },
+  {
+    id: 'haumonsters',
+    name: 'HAUMonsters',
+    image: 'project-haumonsters',
+    role: 'Group Project - Full-Stack Developer',
+    description: 'HAUMonsters is a Pokémon-inspired, location-based web application where players can discover and catch virtual monsters using GPS-based detection. The application features player accounts, monster collections, an interactive map, and a leaderboard for tracking top players. Developed as an academic group project, it also demonstrates cloud deployment through AWS infrastructure and backend functionality for managing players and monsters.',
+    technologies: ['PHP', 'HTML', 'CSS', 'JavaScript', 'AWS EC2'],
+    github: 'https://github.com/hrspnd/HAUMonsters',
+  },
+]
+

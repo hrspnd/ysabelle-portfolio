@@ -1,0 +1,32 @@
+﻿.desktop-shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #484848;
+  font: inherit;
+  font-size: clamp(16px, 1.25vw, 24px);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.2;
+}
+.desktop-shortcut img { width: clamp(68px, 6.63vw, 128px); height: clamp(68px, 6.63vw, 128px); object-fit: contain; image-rendering: pixelated; }
+
+a.desktop-shortcut:hover { background: rgb(84 99 166 / 8%); border-color: rgb(84 99 166 / 35%); }
+.desktop-shortcut:disabled { cursor: not-allowed; }
+.desktop-shortcut:disabled span::after { content: ' · soon'; font-size: 0.7em; font-weight: 400; }
+
+
+
+
+/* The artwork occupies only 31 of the source image's 48 pixels. */
+.desktop-shortcut[href='#about'] img { transform: scale(1.5); }
+

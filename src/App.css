@@ -1,0 +1,6 @@
+﻿.portfolio-desktop { min-height: 100svh; padding: clamp(32px, 6.04vw, 116px) clamp(20px, 7.14vw, 137px); }
+.portfolio-desktop > main { display: grid; gap: clamp(40px, 6vw, 116px); outline: none; }
+.projects-content { min-height: 320px; padding: clamp(28px, 4vw, 76px); }
+@media (max-width: 600px) { .portfolio-desktop { padding: 20px 12px; } }
+
+
