@@ -1,6 +1,7 @@
 ﻿// Asset paths remain local in development and are fingerprinted by Vite at build time.
-const images = import.meta.glob('../assets/portfolio/*.png', { eager: true, query: '?url', import: 'default' })
-export const asset = (name) => images[`../assets/portfolio/${name}.png`]
+const images = import.meta.glob('../assets/portfolio/*.{png,webp}', { eager: true, query: '?url', import: 'default' })
+export const asset = (name) =>
+  images[`../assets/portfolio/${name}.webp`] ?? images[`../assets/portfolio/${name}.png`]
 
 export const technologyGroups = [
   { title: 'Development', items: [
@@ -53,5 +54,6 @@ export const education = [
     achievements: [{ title: 'Consistent Honor Roll', detail: 'Grades 1 - 6', year: 'S.Y. 2011 - 2017' }],
   },
 ]
+
 
 

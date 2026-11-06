@@ -1,4 +1,4 @@
-﻿# Ysabelle Portfolio
+﻿# Portfolio
 
 Personal portfolio built with React, Vite, JavaScript, and regular CSS, based on the supplied Figma portfolio.
 
@@ -54,4 +54,5 @@ The production base path is configured for https://hrspnd.github.io/ysabelle-por
 To preview the production build locally, run npm run build and npm run preview, then open http://localhost:4173/ysabelle-portfolio/.
 
 If the repository name or hosting path changes, update base in vite.config.js.
+
 
