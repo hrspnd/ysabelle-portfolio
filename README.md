@@ -41,3 +41,17 @@ The supplied desktop icons are 48 x 48 pixel-art assets. CSS uses crisp pixel re
 
 
 
+
+## GitHub Pages
+
+The production base path is configured for https://hrspnd.github.io/ysabelle-portfolio/.
+
+1. Open repository Settings → Pages.
+2. Under Build and deployment, set Source to GitHub Actions.
+3. Commit and push the deployment files to main. The Deploy portfolio to GitHub Pages workflow installs dependencies, lints, builds, and deploys dist.
+4. You can also run the workflow manually from the Actions tab.
+
+To preview the production build locally, run npm run build and npm run preview, then open http://localhost:4173/ysabelle-portfolio/.
+
+If the repository name or hosting path changes, update base in vite.config.js.
+
