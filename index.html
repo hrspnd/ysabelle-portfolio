@@ -7,10 +7,53 @@
     <meta name="theme-color" content="#424242" />
     <meta name="description" content="The personal portfolio of Mary Alexa Ysabelle V. Pineda, a Computer Science student at Holy Angel University." />
     <title>Mary Alexa Ysabelle Pineda | Portfolio</title>
+    <!-- Keep fallback styles inline so they work when the app's assets fail to load. -->
+    <style>
+      #load-fallback { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; overflow: auto; box-sizing: border-box; padding: 24px; background: linear-gradient(160deg, #b9dcf6, #77ade0); color: #424242; font-family: 'Segoe UI', sans-serif; }
+      #load-fallback * { box-sizing: border-box; }
+      #load-fallback .fallback-window { width: min(100%, 560px); overflow: hidden; border: 4px solid #424242; border-radius: 14px; background: #424242; box-shadow: 0 6px 24px #0003; }
+      #load-fallback .fallback-titlebar { border-radius: 10px 10px 0 0; padding: 14px 20px; background: #424242; color: white; font-size: 20px; font-weight: 700; }
+      #load-fallback .fallback-content { background: #fff; padding: clamp(24px, 5vw, 40px); }
+      #load-fallback h1 { margin: 0 0 16px; font-size: clamp(24px, 5vw, 32px); line-height: 1.2; }
+      #load-fallback p { margin: 0 0 20px; font-size: 17px; line-height: 1.6; }
+      #load-fallback button { border: 0; border-radius: 6px; padding: 12px 22px; background: #424242; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+      #load-fallback button:focus-visible { outline: 3px solid #5463a6; outline-offset: 4px; }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main id="load-fallback">
+        <section class="fallback-window" aria-labelledby="fallback-heading">
+          <header class="fallback-titlebar">portfolio</header>
+          <div class="fallback-content">
+            <div role="status" aria-live="polite">
+              <h1 id="fallback-heading">Loading portfolio…</h1>
+              <p id="fallback-message">Just a moment while everything loads.</p>
+            </div>
+            <button id="fallback-reload" type="button" hidden>Reload portfolio</button>
+            <noscript><p>JavaScript is turned off. Please enable it in your browser to view the portfolio.</p></noscript>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script>
+      // React replaces this markup when it renders successfully.
+      (() => {
+        const showLoadError = () => {
+          if (!document.getElementById('load-fallback')) return;
+          document.getElementById('fallback-heading').textContent = 'The portfolio couldn’t load';
+          document.getElementById('fallback-message').textContent = 'Please try reloading the page. If it still won’t open, come back a little later.';
+          document.getElementById('fallback-reload').hidden = false;
+        };
+        document.getElementById('fallback-reload').addEventListener('click', () => window.location.reload());
+        window.addEventListener('error', (event) => {
+          if (event.target instanceof HTMLScriptElement && event.target.type === 'module') showLoadError();
+        }, true);
+        window.setTimeout(showLoadError, 10000);
+      })();
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
 
