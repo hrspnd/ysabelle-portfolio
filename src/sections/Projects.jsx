@@ -2,6 +2,7 @@
 import { projects } from '../data/projects.js'
 import ProjectDetails, { ProjectImage } from '../components/ProjectDetails.jsx'
 import ProjectDialog from '../components/ProjectDialog.jsx'
+import ProjectCard from '../components/ProjectCard.jsx'
 import './Projects.css'
 
 // One breakpoint controls both the rendered interaction and its CSS layout.
@@ -42,15 +43,12 @@ function DesktopProjects() {
     <div className="projects-content">
       <div className="projects-grid">
         {projects.map(project => (
-          <button className="project-shortcut" type="button" key={project.id}
-            aria-haspopup="dialog" onClick={() => setSelectedId(project.id)}>
-            <ProjectImage project={project} />
-            <span>{project.name}</span>
-          </button>
+          <ProjectCard key={project.id} project={project} onOpen={() => setSelectedId(project.id)} />
         ))}
       </div>
       {selected && <ProjectDialog key={selected.id} project={selected} onDismiss={() => setSelectedId(null)} />}
     </div>
   )
 }
+
 

@@ -1,6 +1,10 @@
 ﻿export const projects = [
   {
     id: 'capsicam',
+    summary: "A mobile application that uses deep learning to identify chili pepper leaf diseases through image classification.",
+    badges: ["Group Thesis Project","Full-Stack Developer"],
+    year: 2026,
+    cardTechnologies: [["python","Python"],["flutter","Flutter"],["supabase","Supabase"]],
     name: 'CapsiCAM',
     image: 'project-capsicam',
     role: 'Group Thesis Project | Full Stack Developer',
@@ -10,6 +14,10 @@
   },
   {
     id: 'stardewfest',
+    summary: "A fan-made Stardew Valley website that helps players explore seasonal festivals, including their schedules, locations, and activities.",
+    badges: ["Solo Project"],
+    year: 2024,
+    cardTechnologies: [["html","HTML"],["css","CSS"],["javascript","JavaScript"]],
     name: 'StardewFest Website',
     image: 'project-stardewfest',
     pixelArt: true,
@@ -19,6 +27,10 @@
   },
   {
     id: 'haulam',
+    summary: "A campus food discovery app that allows Holy Angel University students to browse food stalls, search for meals, and save their favorites.",
+    badges: ["Group Project","Full-Stack Developer"],
+    year: 2025,
+    cardTechnologies: [["flutter","Flutter"],["supabase","Supabase"]],
     name: 'HAUlam',
     image: 'project-haulam',
     role: 'Group Project - Full-Stack Developer',
@@ -28,6 +40,10 @@
   },
   {
     id: 'stardew-tracker',
+    summary: "An interactive web application that helps Stardew Valley players track their progress toward 100% perfection through categorized checklists and a progress dashboard.",
+    badges: ["Solo Project"],
+    year: 2026,
+    cardTechnologies: [["react-project","React"],["css","CSS"],["javascript","JavaScript"]],
     name: 'Stardew Perfection Tracker',
     image: 'project-tracker',
     pixelArt: true,
@@ -37,6 +53,10 @@
   },
   {
     id: 'haumonsters',
+    summary: "A Pokémon-inspired, location-based web application where players can discover and catch virtual monsters, manage their collections, and compete on a leaderboard.",
+    badges: ["Group Project","Full-Stack Developer"],
+    year: 2025,
+    cardTechnologies: [["html","HTML"],["css","CSS"],["javascript","JavaScript"],["php","PHP"],["aws","AWS"]],
     name: 'HAUMonsters',
     image: 'project-haumonsters',
     role: 'Group Project - Full-Stack Developer',
@@ -45,4 +65,6 @@
     github: 'https://github.com/hrspnd/HAUMonsters',
   },
 ]
+
+
 

@@ -11,7 +11,7 @@
 .portrait-crop { position: relative; width: 100%; margin: 0; aspect-ratio: 346 / 419; overflow: hidden; }
 .portrait-crop img { position: absolute; width: 117.63%; height: 129.41%; max-width: none; left: -9.25%; top: -29.37%; }
 .hero-greeting { font-size: clamp(28px, 2.5vw, 48px); margin-bottom: 12px; }
-.hero-introduction h1 { color: var(--accent); font-size: clamp(40px, 5.2vw, 100px); line-height: 1.2; font-weight: 700; letter-spacing: -0.035em; margin: 0 0 12px; }
+.hero-introduction h1 { color: #599ca1; font-size: clamp(40px, 5.2vw, 100px); line-height: 1.2; font-weight: 700; letter-spacing: -0.035em; margin: 0 0 12px; }
 .hero-introduction h1 span { display: block; }
 .hero-description { font-size: clamp(19px, 1.67vw, 32px); line-height: 1.4; }
 .hero-shortcuts { display: flex; flex-direction: column; gap: 12px; }
@@ -63,4 +63,5 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-cv { transition: none; transform: none; }
 }
+
 
