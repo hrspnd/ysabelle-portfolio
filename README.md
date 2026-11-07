@@ -1,58 +1,58 @@
 ﻿# Portfolio
 
-Personal portfolio built with React, Vite, JavaScript, and regular CSS, based on the supplied Figma portfolio.
+My personal portfolio, with a little inspiration from Windows XP. It brings together my projects, the tools I work with, my education, and ways to get in touch.
+
+Built with React, JavaScript, Vite, and CSS. I designed the layout in Figma and adapted it for desktop and mobile.
+
+[Visit the portfolio](https://hrspnd.github.io/ysabelle-portfolio/)
+
+## What's inside
+
+- An introduction and a viewable/downloadable CV.
+- An About section with my technologies, tools, and education.
+- Five projects: CapsiCAM, StardewFest, HAUlam, Stardew Perfection Tracker, and HAUMonsters.
+- Links to my email, LinkedIn, and GitHub.
+
+Project details open in desktop-style windows on larger screens and appear in a list on mobile. The CV opens in a popup on desktop and a new tab on mobile.
 
 ## Run locally
 
-- `npm install` if dependencies are missing.
-- `npm run dev` starts the local development server.
-- `npm run build` creates production files in `dist/`.
-- `npm run preview` previews the production build.
-- `npm run lint` runs ESLint.
+```sh
+npm install
+npm run dev
+```
 
-On Windows, use `npm.cmd` if PowerShell blocks the npm script wrapper.
+Open the local URL printed by Vite. If PowerShell blocks npm, use `npm.cmd` instead.
 
-## Organization
+Other commands:
 
-- `src/components/`: reusable desktop window and icon shortcuts.
-- `src/sections/`: Home, About, and Projects with desktop popups and a mobile detail list. Contact links and layout are in src/sections/Contact.jsx and Contact.css.
-- `src/data/portfolio.js`: technology groups, education records, and local image lookup.
-- `src/assets/portfolio/`: original assets exported through Figma MCP.
-- `src/assets/fonts/`: self-hosted Outfit variable font and its license.
-- `src/index.css`: shared typography, colors, background, and accessibility styles.
-- Section and component CSS files own their responsive layouts.
+```sh
+npm run build    # Build the site into dist/
+npm run preview  # Preview the production build
+npm run lint    # Check the JavaScript and JSX
+```
 
-One scrollable page contains Hero, About, Projects, and Contact. Native anchors (`#home`, `#about`, `#projects`, `#contact`) scroll between sections without a routing library. Globe icons return to the top. Smooth scrolling respects reduced-motion preferences. About uses natural document flow, wrapping logo rows, and a content-sized school timeline instead of the design canvas's fixed positions. Layouts stack on small screens.
+The production preview is served at `http://localhost:4173/ysabelle-portfolio/` by default.
 
-## Content still needed
+## Editing content
 
-- Project descriptions, technologies, logos, and GitHub links are defined in src/data/projects.js. Desktop uses native dialogs; screens up to 600px show all details inline. Dialogs support Escape, backdrop clicks, focus restoration, and background scroll locking.
-- Contact includes email (mailto), LinkedIn, and GitHub links using the supplied destinations and Figma assets.
-- Robotics Competition date corrected to S.Y. 2018-2019 as requested.
-- Confirm the name of the third Productivity asset before replacing its generic accessible label.
+- `src/data/portfolio.js` — technology names, school details, and image lookup.
+- `src/data/projects.js` — project descriptions, technologies, and repository links.
+- `src/sections/Hero.jsx` — introduction and CV button.
+- `src/sections/Contact.jsx` — contact links.
+- `public/cv.pdf` — the CV; replace this file to update it.
 
-The portrait export is the original high-resolution Figma asset (approximately 12.7 MB). A smaller web export would improve first-load performance while preserving its crop.
+Shared components live in `src/components/`. Each section has its own CSS, while `src/index.css` holds the shared styles and hover effects. Images are in `src/assets/portfolio/`, and the Outfit font and its license are in `src/assets/fonts/`.
 
-No additional runtime dependencies were added.
+## Deployment
 
+The site deploys to GitHub Pages through `.github/workflows/deploy.yml`. Pushes to `main` run lint, build the site, and publish `dist/`.
 
-The supplied desktop icons are 48 x 48 pixel-art assets. CSS uses crisp pixel rendering; all three hero shortcuts share the same responsive icon dimensions. A higher-detail source is needed for more detail.
+In the repository's **Settings → Pages**, the source must be set to **GitHub Actions**. Using branch-based deployment publishes the unbuilt source instead.
 
-
-
+The Vite base path is `/ysabelle-portfolio/`. Update `base` in `vite.config.js` if the repository name or hosting path changes.
 
 
-## GitHub Pages
+## Troubleshooting Note 
 
-The production base path is configured for https://hrspnd.github.io/ysabelle-portfolio/.
-
-1. Open repository Settings → Pages.
-2. Under Build and deployment, set Source to GitHub Actions.
-3. Commit and push the deployment files to main. The Deploy portfolio to GitHub Pages workflow installs dependencies, lints, builds, and deploys dist.
-4. You can also run the workflow manually from the Actions tab.
-
-To preview the production build locally, run npm run build and npm run preview, then open http://localhost:4173/ysabelle-portfolio/.
-
-If the repository name or hosting path changes, update base in vite.config.js.
-
-
+If the deployed site shows a blank page, go to **Actions → Deploy portfolio to GitHub Pages → Run workflow** and rerun it on `main`. Once it finishes, refresh the site. Also check that **Settings → Pages → Source** is still set to **GitHub Actions**.
