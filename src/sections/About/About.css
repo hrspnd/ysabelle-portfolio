@@ -50,9 +50,9 @@
   cursor: default;
   transition: transform 160ms ease-out;
 }
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .technology-item img:hover, .education-logo img:hover {
-    transform: scale(1.025);
+    transform: scale(1.04) rotate(var(--info-tilt, -1.5deg));
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -61,4 +61,8 @@
     transform: none;
   }
 }
+
+
+
+.technology-item:nth-child(even), .education-entry:nth-child(even) .education-logo { --info-tilt: 1.5deg; }
 

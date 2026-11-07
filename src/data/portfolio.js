@@ -11,7 +11,7 @@ export const technologyGroups = [
   { title: 'Databases', items: [['postgresql', 'PostgreSQL'], ['mysql', 'MySQL'], ['supabase', 'Supabase']] },
   { title: 'Tools & Cloud', items: [['git', 'Git'], ['github', 'GitHub'], ['docker', 'Docker'], ['aws', 'AWS']] },
   { title: 'Design', items: [['figma', 'Figma'], ['photoshop', 'Photoshop'], ['canva', 'Canva']] },
-  { title: 'Productivity', items: [['powerpoint', 'PowerPoint'], ['excel', 'Excel'], ['productivity', 'Productivity tool']] },
+  { title: 'Productivity', items: [['powerpoint', 'Microsoft PowerPoint'], ['excel', 'Microsoft Excel'], ['productivity', 'Google Sheets']] },
 ]
 
 export const education = [
