@@ -3,7 +3,7 @@
 export default function EducationEntry({ entry }) {
   return (
     <li className="education-entry">
-      <div className="education-logo"><img src={asset(entry.logo)} alt={entry.school + ' emblem'} loading="lazy" /></div>
+      <div className="education-logo"><img src={asset(entry.logo)} alt={entry.school + ' emblem'} title={entry.school} loading="lazy" /></div>
       <div className="education-content">
         <h3>{entry.school}</h3>
         <p>{entry.qualification}</p>
@@ -21,4 +21,5 @@ export default function EducationEntry({ entry }) {
     </li>
   )
 }
+
 

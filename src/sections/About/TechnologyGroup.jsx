@@ -6,12 +6,13 @@ export default function TechnologyGroup({ title, items }) {
       <h3>{title}</h3>
       <ul className="technology-grid">
         {items.map(([image, label]) => (
-          <li className={`technology-item technology-item--${image}`} key={image} title={label}>
-            <img src={asset(image)} alt={label} loading="lazy" />
+          <li className={`technology-item technology-item--${image}`} key={image}>
+            <img src={asset(image)} alt={label} title={label} loading="lazy" />
           </li>
         ))}
       </ul>
     </section>
   )
 }
+
 

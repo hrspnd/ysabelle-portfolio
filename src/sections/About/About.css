@@ -44,3 +44,21 @@
 
 
 
+
+/* Informational logos use a smaller hover response than interactive controls. */
+.technology-item img, .education-logo img {
+  cursor: default;
+  transition: transform 160ms ease-out;
+}
+@media (hover: hover) and (pointer: fine) {
+  .technology-item img:hover, .education-logo img:hover {
+    transform: scale(1.025);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .technology-item img, .education-logo img {
+    transition: none;
+    transform: none;
+  }
+}
+

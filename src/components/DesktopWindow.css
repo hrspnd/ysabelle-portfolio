@@ -22,7 +22,6 @@
 .window-label { display: inline-flex; align-items: center; gap: 20px; font-size: clamp(24px, 2.5vw, 48px); font-weight: 700; line-height: 1; }
 .window-label img, .window-back img { display: block; width: clamp(30px, 2.5vw, 48px); height: clamp(30px, 2.5vw, 48px); object-fit: contain; image-rendering: pixelated; }
 .window-back { display: inline-flex; align-items: center; justify-content: center; padding: 6px; border-radius: 4px; }
-.window-back:hover { background: rgb(255 255 255 / 15%); }
 @media (max-width: 600px) {
   .desktop-window { border-width: 3px; border-radius: 12px; scroll-margin-top: 12px; }
   .window-label { gap: 10px; }
@@ -31,4 +30,5 @@
 
 /* Match the visible artwork size, compensating for transparent padding. */
 #about .window-label img { transform: scale(1.5); }
+
 

@@ -20,7 +20,6 @@
 }
 .desktop-shortcut img { width: clamp(68px, 6.63vw, 128px); height: clamp(68px, 6.63vw, 128px); object-fit: contain; image-rendering: pixelated; }
 
-a.desktop-shortcut:hover { background: rgb(84 99 166 / 8%); border-color: rgb(84 99 166 / 35%); }
 .desktop-shortcut:disabled { cursor: not-allowed; }
 .desktop-shortcut:disabled span::after { content: ' · soon'; font-size: 0.7em; font-weight: 400; }
 
@@ -29,4 +28,5 @@ a.desktop-shortcut:hover { background: rgb(84 99 166 / 8%); border-color: rgb(84
 
 /* The artwork occupies only 31 of the source image's 48 pixels. */
 .desktop-shortcut[href='#about'] img { transform: scale(1.5); }
+
 
