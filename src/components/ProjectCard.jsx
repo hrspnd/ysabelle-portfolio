@@ -1,10 +1,10 @@
 ﻿import { asset } from '../data/portfolio.js'
-import { ProjectImage } from './ProjectDetails.jsx'
+import ProjectImage from './ProjectImage.jsx'
 
-export default function ProjectCard({ project, onOpen }) {
+export default function ProjectCard({ project }) {
   return (
-    <button className={`project-shortcut project-card project-card--${project.id}`} type="button"
-      aria-haspopup="dialog" aria-label={`View ${project.name} details`} onClick={onOpen}>
+    <a className={`project-shortcut project-card project-card--${project.id}`} href={project.github} target="_blank" rel="noopener noreferrer"
+      aria-label={`View ${project.name} on GitHub (opens in a new tab)`}>
       <span className="project-card-title">{project.name}</span>
       <span className="project-card-body">
         <ProjectImage project={project} />
@@ -22,7 +22,8 @@ export default function ProjectCard({ project, onOpen }) {
         </span>
         <span className="project-card-year"><img src={asset('project-copyright')} alt="Copyright" />{project.year}</span>
       </span>
-    </button>
+    </a>
   )
 }
+
 

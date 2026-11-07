@@ -13,7 +13,7 @@ Built with React, JavaScript, Vite, and CSS. I designed the layout in Figma and 
 - Five projects: CapsiCAM, StardewFest, HAUlam, Stardew Perfection Tracker, and HAUMonsters.
 - Links to my email, LinkedIn, and GitHub.
 
-Project details open in desktop-style windows on larger screens and appear in a list on mobile. The CV opens in a popup on desktop and a new tab on mobile.
+Project cards link directly to their GitHub repositories and stack into a single column on mobile. The CV opens in a popup on desktop and a new tab on mobile.
 
 ## Run locally
 
@@ -56,3 +56,4 @@ The Vite base path is `/ysabelle-portfolio/`. Update `base` in `vite.config.js` 
 ## Troubleshooting Note 
 
 If the deployed site shows a blank page, go to **Actions → Deploy portfolio to GitHub Pages → Run workflow** and rerun it on `main`. Once it finishes, refresh the site. Also check that **Settings → Pages → Source** is still set to **GitHub Actions**.
+
