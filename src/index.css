@@ -37,20 +37,32 @@ html { scroll-behavior: smooth; }
 
 
 /* Interactive items lift and enlarge without moving neighboring content. */
-:is(a.desktop-shortcut, .project-shortcut, .contact-link, .window-back, .project-close, .project-repository) {
+:is(a.desktop-shortcut, .project-shortcut, .contact-link, .window-back, .project-close, .project-repository, .cv-dialog-close, .cv-dialog-toolbar a) {
   transition: transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
   transform-origin: center;
 }
 @media (hover: hover) and (pointer: fine) {
-  :is(a.desktop-shortcut, .project-shortcut, .contact-link, .window-back, .project-close, .project-repository):hover {
+  :is(a.desktop-shortcut, .project-shortcut, .contact-link, .window-back, .project-close, .project-repository, .cv-dialog-close, .cv-dialog-toolbar a):hover {
     transform: translateY(-3px) scale(1.06);
   }
   :is(a.desktop-shortcut, .project-shortcut, .contact-link, .window-back):hover {
     transform: translateY(-3px) scale(1.06) rotate(var(--hover-tilt, -3deg));
   }
 }
+@media (hover: hover) and (pointer: fine) {
+  .cv-dialog-toolbar a:hover {
+    transform: translateY(-1px) scale(1.02) rotate(1deg);
+  }
+  .cv-dialog-toolbar a:nth-child(even):hover {
+    transform: translateY(-1px) scale(1.02) rotate(-1deg);
+  }
+  :is(.project-close, .cv-dialog-close):hover {
+    transform: scale(1.025);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  :is(a.desktop-shortcut, .project-shortcut, .contact-link, .window-back, .project-close, .project-repository) {
+  :is(a.desktop-shortcut, .project-shortcut, .contact-link, .window-back, .project-close, .project-repository, .cv-dialog-close, .cv-dialog-toolbar a) {
     transition: none;
     transform: none;
   }
@@ -62,4 +74,7 @@ html { scroll-behavior: smooth; }
 :is(.hero-shortcuts > .desktop-shortcut, .projects-grid > .project-shortcut, .contact-content > .contact-link):nth-child(even) {
   --hover-tilt: 3deg;
 }
+
+
+
 

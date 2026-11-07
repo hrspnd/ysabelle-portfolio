@@ -1,0 +1,26 @@
+﻿.cv-dialog {
+  width: min(1100px, calc(100vw - 64px));
+  max-width: none;
+  height: 90svh;
+  max-height: 1100px;
+  margin: auto;
+  padding: 0;
+  border: 5px solid var(--ink);
+  border-radius: 17px;
+  background: var(--ink);
+  color: var(--ink);
+  box-shadow: 0 0 11.4px 12px rgb(0 0 0 / 29%);
+  overflow: hidden;
+}
+.cv-dialog[open] { display: flex; flex-direction: column; }
+.cv-dialog::backdrop { background: rgb(0 0 0 / 15%); }
+.cv-dialog-header { display: flex; flex: none; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 20px; color: white; }
+.cv-dialog-header h2 { margin: 0; font-size: clamp(24px, 2vw, 36px); line-height: 1.2; }
+.cv-dialog-close { display: grid; place-items: center; width: 44px; height: 44px; padding: 6px; border: 0; background: transparent; cursor: pointer; }
+.cv-dialog-close img { display: block; width: 32px; height: 32px; object-fit: contain; }
+.cv-dialog-close:focus-visible { outline-color: white; }
+.cv-dialog-toolbar { display: flex; flex: none; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 12px 20px; background: white; font-size: 16px; }
+.cv-dialog-toolbar a { color: var(--ink); text-underline-offset: 4px; }
+.cv-dialog-toolbar .cv-download { padding: 8px 16px; border-radius: 6px; background: var(--ink); color: white; text-decoration: none; }
+.cv-preview { display: block; flex: 1; min-height: 0; width: 100%; border: 0; background: #eee; }
+

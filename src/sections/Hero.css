@@ -38,3 +38,29 @@
 
 
 
+
+.hero-cv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 166px;
+  min-height: 32px;
+  margin-top: 32px;
+  padding: 4px 20px;
+  border-radius: 6px;
+  background: var(--ink);
+  color: white;
+  font-size: 20px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 180ms ease-out;
+}
+.hero-cv img { width: 25px; height: 25px; object-fit: contain; }
+@media (hover: hover) and (pointer: fine) {
+  .hero-cv:hover { transform: translateY(-2px) scale(1.04); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cv { transition: none; transform: none; }
+}
+
